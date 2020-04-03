@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class remove add</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="class-name">
+      <div class="class-name-remove">
+        <p>Hello DOM</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const el = document.querySelector(".class-name");
+    const elr = document.querySelector(".class-name-remove");
+    const elrp = document.querySelector(".class-name-remove p");
+    el.classList.add("new-class-name");
+    elr.classList.remove("class-name-remove");
+    elrp.addEventListener("click", function () {
+      elrp.classList.toggle("hi-toggle");
+    });
+    el.addEventListener("click", function () {
+      if (el.classList.contains("class-name")) {
+        el.classList.remove("class-name");
+      }
+    })
+  </script>
+</body>
+
+</html>
